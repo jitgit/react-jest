@@ -1,14 +1,14 @@
 class Node {
-  constructor(value) {
-    this.value = value;
-    this.left = null;
-    this.right = null;
-  }
+	constructor(value) {
+		this.value = value;
+		this.left = null;
+		this.right = null;
+	}
 
-  toLocaleString() {
-    return '' + this.value;
-  }
+	toLocaleString() {
+		return '' + this.value;
+	}
 
 }
 
-export default Node
+export default Node;
