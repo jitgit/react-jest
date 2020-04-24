@@ -1,0 +1,8 @@
+{
+  "rootDir": "../",
+  "testEnvironment": "node",
+  "verbose": true,
+  "moduleFileExtensions": ["js"],
+  "testPathIgnorePatterns": ["/node_modules/"],
+  "testMatch": ["**/*.test.js"]
+}
