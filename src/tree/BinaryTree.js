@@ -29,6 +29,16 @@ export default class BinaryTree {
 		this.inorderRec(this.root, d, cb);
 	}
 
+	depth() {
+		var d = { depth: -1, depthSerial: {} };
+		var depth = -1;
+		const cb = (v) => {
+			depth = Math.max(depth, v.depth);
+		};
+		this.inorderRec(this.root, d, cb);
+		return depth;
+	}
+
 	inorderRec(n, d, cb) {
 		if (n) {
 			d.depth++;

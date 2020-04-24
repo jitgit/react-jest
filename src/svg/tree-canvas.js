@@ -16,10 +16,10 @@ export default class TreeCanvas extends React.Component {
     componentDidMount() {
         const { w, h, radius } = this.state;
         var tree = new BinaryTree();
-        '20 10 30 5 15 40 25 1'.split(' ').map(e => tree.add(parseInt(e.trim())))
+        '20 10 30 5 15 40 25 1 2 -10'.split(' ').map(e => tree.add(parseInt(e.trim())))
         const nodes = [];
         var i = 0;
-        const depth = 4;
+        const depth = tree.depth();
         const yGap = (h - (2 * radius * depth)) / (depth + 1);
         const cb = (v) => {
             i++;
