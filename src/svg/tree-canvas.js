@@ -1,5 +1,5 @@
 import React from 'react';
-import BinaryTree from '../tree/BinaryTree';
+import BinaryTreePlain from '../tree/BinaryTreePlain';
 export default class TreeCanvas extends React.Component {
 
     constructor(props) {
@@ -15,7 +15,7 @@ export default class TreeCanvas extends React.Component {
 
     componentDidMount() {
         const { w, h, radius } = this.state;
-        var tree = new BinaryTree();
+        var tree = new BinaryTreePlain();
         '20 10 30 5 15 40 25 1 2 -10'.split(' ').map(e => tree.add(parseInt(e.trim())))
         const nodes = [];
         var i = 0;
@@ -41,7 +41,7 @@ export default class TreeCanvas extends React.Component {
         const { w, h, depth, radius, nodes } = this.state;
         const gap = (h - (2 * radius * depth)) / (depth + 1);
         const c = w / 2 + radius / 2;
-        console.log(`gap: ${gap}, c:${c}, nodes:${nodes.length}, state:${this.state}`);
+        console.log(`gap: ${gap}, c: ${c}, nodes: ${nodes.length}, state: ${this.state}`);
 
         const circles = rs.map((r, i) => {
             return <circle key={i} cx={c} cy={(gap + radius) * (i + 1)} r={radius} fill="white" />

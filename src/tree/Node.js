@@ -3,9 +3,10 @@ class Node {
 		this.value = value;
 		this.left = null;
 		this.right = null;
+		this.depth = -1;
 	}
 
-	toLocaleString() {
+	toString() {
 		return '' + this.value;
 	}
 

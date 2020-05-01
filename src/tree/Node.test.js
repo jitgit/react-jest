@@ -3,7 +3,7 @@ import { assert } from 'chai';
 
 describe('Node Test', () => {
 	it('Node creation', () => {
-		var n = new Node(2);
+		let n = new Node(2);
 		assert.isNotNull(n);
 		assert.isNotNull(n.value);
 		assert.isNull(n.left);
