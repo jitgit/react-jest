@@ -26,7 +26,6 @@ export default class BinaryTree {
 
 
 	depth() {
-		let d = { depthSerial: {} };
 		let maxDepth = -1;
 		const cb = (v) => {
 			maxDepth = Math.max(maxDepth, v.depth);

@@ -3,7 +3,7 @@ class Node {
 		this.value = value;
 		this.left = null;
 		this.right = null;
-		this.depth = -1;
+		this.depth = -2;
 	}
 
 	toString() {
